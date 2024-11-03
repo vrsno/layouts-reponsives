@@ -1,0 +1,77 @@
+body{
+    margin: 0px;
+    padding: 0;
+}
+
+body, div, ul, li, img, p{
+    box-sizing: border-box;
+}
+
+
+.top-container{
+    background-image: url("https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.top-container h1{
+    color: #48e;
+    font-size: 50px;
+    text-shadow: 0 4px 20px #0003;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 2px;
+   
+}
+
+.top-container h1::first-letter{
+    font-size: 100px;
+    color: red;
+}
+
+.text{
+    margin:50px 5% ;
+    font-family: sans-serif;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    position: fixed;
+    background-color: #fff;
+    min-width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    font-family: cursive;
+    box-shadow: 0 4px 8px #0003;
+    transition: background-color .3s;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: #000;
+}
+
+.navbar ul li a:hover{
+    color: red;
+}
+
+.navbar.active{ 
+    background-color: #0009;
+}
+
+.navbar.active ul li a{
+    color: #fff9;
+}

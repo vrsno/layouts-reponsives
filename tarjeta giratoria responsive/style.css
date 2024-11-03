@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: var(--bg-color);
+    font-family: montserrat;
+    --bg-color: color-mix(in srgb, #f62 70%, #fff);
+    --card-color: #fff;
+    --dark-color: #f62;
+    --text-color: #444;
+    --card-bg-color: #fff6;
+}
+
+body,div,ul,li,a,h1,h2,h3,h4,p{
+    margin: 0;
+    padding: 0;
+   
+}
+
+.card{
+    max-width: clamp(160px, 50%, 320px);
+    background-color: var(--card-bg-color);
+    margin: 50px auto;
+    position: relative;
+    border-radius: 8px;
+    
+    
+}
+
+
+/* propiedad */
+.card__back, .card__front{
+     backface-visibility: hidden;
+     transition: transform 2s;
+     background-color: var(--card-color);
+     border-radius: 8px;
+    overflow: hidden;
+}
+
+
+/* fin xd */
+
+
+.card:hover .card__front{
+    transform: perspective(1200px) rotateY(180deg);
+}
+
+.card:hover .card__back{
+    transform: perspective(1200px) rotateY(360deg);
+}
+
+
+/* perfectiva */
+.card__front{
+    transform: perspective(1200px) rotateY(0deg);
+}
+
+/* fin xd */
+
+
+.card__worker {
+    max-height: 150px;
+    overflow: hidden;
+    display: block;
+    
+}
+
+.card__worker img{
+    max-width: 100%;
+    
+}
+
+.card__data{
+    padding: 12px;
+}
+
+.card__data span{ 
+    font-size: 1.4rem;
+    margin: 12px 0;
+    display: block;
+}
+
+/* card back */
+
+.card__back {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    
+    padding: 12px;
+    transform: perspective(1200px) rotateY(180deg);
+}
+
+.card__back span{
+    font-size: 1.5rem;
+    margin: 6px 0;
+}
+
+.skill-bar {
+    border: 3px solid var(--bg-color);
+    margin: 6px;
+    padding: 3px;
+    border-radius: 4px;
+
+}
+
+.skill-bar div {
+    background-color: var(--bg-color);
+    padding: 9px;
+    color: var(--card-color);
+    border-radius: 4px;
+}
+
+.skill-bar:last-child div{
+    width: 90%;
+}
+
+.skill-bar:nth-child(2) div{
+    width: 80%;
+}
+
+
+.skill-bar:nth-child(4) div{
+    width: 80%;
+}
