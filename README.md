@@ -1,2 +1,3 @@
-# pagina-web-responsive
-pagina web de prueba
+# Layouts responsives
+
+aqui encontraras varios layout creativos
